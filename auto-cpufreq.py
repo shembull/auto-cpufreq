@@ -352,8 +352,8 @@ def sysinfo():
         core_num += 1
 
     # print current fan speed | temporarily commented
-    #current_fans = p.sensors_fans()['thinkpad'][0].current
-    #print("\nCPU fan speed:", current_fans, "RPM")
+    current_fans = p.sensors_fans()['thinkpad'][0].current
+    print("\nCPU fan speed:", current_fans, "RPM")
 
 # read log func
 def read_log():
