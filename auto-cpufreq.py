@@ -56,6 +56,8 @@ def deploy():
     # deploy cpufreqctl script func call
     cpufreqctl()
 
+    # leave bluetooth as is
+    """
     print("* Turn off bluetooth on boot")
     btconf="/etc/bluetooth/main.conf"
     try:
@@ -68,6 +70,7 @@ def deploy():
             f.write(content.replace(orig_set, change_set))
     except:
         print("\nERROR:\nWas unable to turn off bluetooth on boot")
+    """
 
     print("\n* Deploy auto-cpufreq as system wide accessible binary")
     os.system("cp auto-cpufreq.py /usr/bin/auto-cpufreq")
@@ -86,6 +89,8 @@ def remove():
 
     print("\n" + "-" * 21 + " Removing auto-cpufreq daemon " + "-" * 22 + "\n")
 
+    # leave bluetooth as is
+    """
     print("* Turn on bluetooth on boot")
     btconf="/etc/bluetooth/main.conf"
     try:
@@ -98,6 +103,7 @@ def remove():
             f.write(content.replace(change_set, orig_set))
     except:
         print("\nERROR:\nWas unable to turn on bluetooth on boot")
+    """
 
     # run auto-cpufreq daemon install script
     s.call("/usr/bin/auto-cpufreq-remove", shell=True)

@@ -1,5 +1,7 @@
 # auto-cpufreq
 
+Leaves Bluetooth as is
+
 Automatic CPU speed & power optimizer for Linux based on active monitoring of laptop's battery state, CPU usage and system load. Ultimately allowing you to improve battery life without making any compromises.
 
 For tl;dr folks there's a: [Youtube: auto-cpufreq - tool demo](https://www.youtube.com/watch?v=QkYRpVEEIlg)
